@@ -1,0 +1,22 @@
+{
+  "name": "iwxserver",
+  "version": "1.0.0",
+  "description": "微销队",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thorlove/iwxteam.git"
+  },
+  "keywords": [
+    "微销队"
+  ],
+  "author": "haibing.tian@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thorlove/iwxteam/issues"
+  },
+  "homepage": "https://github.com/thorlove/iwxteam#readme"
+}
