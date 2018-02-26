@@ -1,12 +1,44 @@
 {
-  "pages":[
-    "pages/index/index",
-    "pages/logs/logs"
+  "pages": [
+    "pages/index/start/start",
+    "pages/home/home",
+    "pages/warehouse/index/index",
+    "pages/ledger/index/index",
+    "pages/me/index/index"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#554d94",
+    "navigationBarTitleText": "微销队",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#666666",
+    "selectedColor": "#554d94",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "static/images/nav/home-off.png",
+        "selectedIconPath": "static/images/nav/home-on.png"
+      },{
+        "pagePath": "pages/warehouse/index/index",
+        "text": "库房",
+        "iconPath": "static/images/nav/warehouse-off.png",
+        "selectedIconPath": "static/images/nav/warehouse-on.png"
+      },{
+        "pagePath": "pages/ledger/index/index",
+        "text": "账本",
+        "iconPath": "static/images/nav/ledger-off.png",
+        "selectedIconPath": "static/images/nav/ledger-on.png"
+      },{
+        "pagePath": "pages/me/index/index",
+        "text": "我的",
+        "iconPath": "static/images/nav/me-off.png",
+        "selectedIconPath": "static/images/nav/me-on.png"
+      }
+    ]
   }
 }

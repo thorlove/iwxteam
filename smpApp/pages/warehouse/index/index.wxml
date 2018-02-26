@@ -1,0 +1,35 @@
+<!--pages/warehouse/index/index.wxml-->
+<view class='container'>
+  <view class='fun-view pt20 pb20'>
+    <view>
+      <text class='weui-grid__icon iconfont icon-shangpin ft56 color-red'></text>
+      <view class="weui-grid__label ft22 color-88">商品</view>
+    </view>
+    <view>
+      <text class='weui-grid__icon iconfont icon-jinhuodan ft56 color-red'></text>
+      <view class="weui-grid__label ft22 color-88 pt10">进货</view>
+    </view>
+    <view>
+      <text class='weui-grid__icon iconfont icon-fahuo ft56 color-red'></text>
+      <view class="weui-grid__label ft22 color-88 pt10">发货</view>
+    </view>
+    <view>
+      <text class='weui-grid__icon iconfont icon-pandian ft56 color-red'></text>
+      <view class="weui-grid__label ft22 color-88 pt10">盘点</view>
+    </view>
+  </view>
+  <view class='h30 color-bg line-top line-bottom'></view>
+  <view>
+    <swiper>
+      <swiper-item>
+        <view>sdfsdfsdf</view>
+      </swiper-item>
+      <swiper-item>
+        <view>sdfsdfsdf</view>
+      </swiper-item>
+      <swiper-item>
+        <view>sdfsdfsdf</view>
+      </swiper-item>
+    </swiper>
+  </view>
+</view>

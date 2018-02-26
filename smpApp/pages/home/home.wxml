@@ -1,0 +1,126 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="search-view pb20">
+    <view class="serarch-content">
+      <text class='iconfont icon-sousu ft36 pl20 pr20'></text>
+      <input placeholder='请输入单号' placeholder-class='placeholder' placeholder-style='color:#888888' class="search-input" maxlength="30" confirm-type="search" bindconfirm='toSearch'></input>
+      <text class='iconfont icon-saoyisao ft36 pl20 pr20'></text>
+    </view>
+  </view>
+
+  <view class='h30 color-bg'></view>
+  <view class='color-bg' style='display: flex;flex-direction: column;'>
+    <view class='tody-view pt40 pb40 ml30 mr30'>
+      <view class='today-content'>
+        <text class='ft32 color-red fw'>￥2,3101</text>
+        <text class='ft22 color-88'>今日销售毛利</text>
+      </view>
+      <view class='line-left'></view>
+      <view class='today-content'>
+        <text class='ft32 color-red fw'>￥6,892</text>
+        <text class='ft22 color-88'>今日销售额</text>
+      </view>
+      <view class='line-left'></view>
+      <view class='today-content'>
+        <text class='ft32 color-red fw'>54</text>
+        <text class='ft22 color-88'>今日订单数</text>
+      </view>
+    </view>
+  </view>
+  
+  <view class='h30 color-bg'></view>
+  <view class='fun-view'>
+    <view class='pt30 pb30 fun-gird'>
+      <view>
+        <text class='weui-grid__icon iconfont icon-shoukuan ft56 color-88'></text>
+        <view class="weui-grid__label ft22 pt16 color-66">待收款：￥1,2312</view>
+      </view>
+      <view class='line-left'></view>
+      <view>
+        <text class='weui-grid__icon iconfont icon-chuku ft56 color-88'></text>
+        <view class="weui-grid__label ft22 pt16 color-66">待出库：3</view>
+      </view>
+      <view class='line-left'></view>
+      <view>
+        <text class='weui-grid__icon iconfont icon-daifahuo ft56 color-88'></text>
+        <view class="weui-grid__label ft22 pt16 color-66">待发货：2</view>
+      </view>
+      <view class='line-left'></view>
+      <view>
+        <text class='weui-grid__icon iconfont icon-fahuozhong ft56 color-88'></text>
+        <view class="weui-grid__label ft22 pt16 color-66">运输中：12</view>
+      </view>
+    </view>
+    <view class='line-top'></view>
+    <view class=' pl20 pr20 '>
+      <navigator class='fun-fahuo pt20 pb20' url="" hover-class="weui-grid_active">
+        <text class='color-35 ft28'>今日发货量</text>
+        <text class='color-66 ft28'>43</text>
+      </navigator>
+      <view class='line-bottom'></view>
+      <view class='fun-opt mb20 mt20'>
+        <view>
+          <text class='weui-grid__icon iconfont icon-rili ft56 color-88'></text>
+          <view class="weui-grid__label pt10 ft22 color-66">月单</view>
+        </view>
+        <view class='line-left'></view>
+        <view>
+          <button class="weui-btn" style='font-size: 28rpx;background-color: #554d94;' type="primary">给买家发送商品清单</button>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class='h30 color-bg'></view>
+  <view class='fun-view'>
+    <view class='pt30 pb30 fun-gird'>
+      <view>
+        <text class='weui-grid__icon iconfont icon-shoukuan ft56 color-88'></text>
+        <view class="weui-grid__label ft22 pt16 color-66">待发单：3</view>
+      </view>
+      <view class='line-left'></view>
+      <view>
+        <text class='weui-grid__icon iconfont icon-fukuan ft56 color-88'></text>
+        <view class="weui-grid__label ft22 pt16 color-66">待付款：￥1,2312</view>
+      </view>
+      <view class='line-left'></view>
+      <view>
+        <text class='weui-grid__icon iconfont icon-daishouhuo ft56 color-88'></text>
+        <view class="weui-grid__label ft22 pt16 color-66">待收货：2</view>
+      </view>
+      <view class='line-left'></view>
+      <view>
+        <text class='weui-grid__icon iconfont icon-ruku ft56 color-88'></text>
+        <view class="weui-grid__label ft22 pt16 color-66">待入库：12</view>
+      </view>
+    </view>
+    <view class='line-top'></view>
+    <view class=' pl20 pr20 '>
+      <navigator class='fun-fahuo pt20 pb20' url="" hover-class="weui-grid_active">
+        <text class='color-35 ft28'>今日进货量</text>
+        <text class='color-66 ft28'>43</text>
+      </navigator>
+      <view class='line-bottom'></view>
+      <view class='fun-opt mb20 mt20'>
+        <view>
+          <text class='weui-grid__icon iconfont icon-rili ft56 color-88'></text>
+          <view class="weui-grid__label pt10 ft22 color-66">月单</view>
+        </view>
+        <view class='line-left'></view>
+        <view>
+          <button class="weui-btn" style='font-size: 28rpx;background-color: #554d94;' type="primary">给供货商发送进货单</button>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class='h30 color-bg '></view>
+  <navigator url="" class='ad-view' hover-class="weui-grid_active">
+    <view class='icon-round ml10 mr10 ' style='height:40px;width:40px;background-color: #fd730a;'>
+      <text class='iconfont icon-huiyuan color-white' style='font-size:50rpx;'></text>
+    </view>
+    <text class='ft24 color-66'>过年了，VIP优惠火爆开启中，每年只需100元，每月只需10元，好礼送不停</text>
+    <text class='iconfont icon-gengduo ml10 mr10 ft36 color-35'></text>
+  </navigator>
+  <view class='h30 color-bg line-bottom'></view>
+</view>
