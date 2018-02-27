@@ -22,13 +22,13 @@
   <view>
     <swiper>
       <swiper-item>
-        <view>sdfsdfsdf</view>
+        <view>11111111111111</view>
       </swiper-item>
       <swiper-item>
-        <view>sdfsdfsdf</view>
+        <view>2222222222222222222</view>
       </swiper-item>
       <swiper-item>
-        <view>sdfsdfsdf</view>
+        <view>333333333333333333</view>
       </swiper-item>
     </swiper>
   </view>
