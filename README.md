@@ -1,2 +1,2 @@
-# smpApp 微信前端
-# ｓｅｒｖｅｒ　ａｐｉ端
+#  smpApp 微信前端
+#   server　端
