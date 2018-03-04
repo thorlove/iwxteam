@@ -1,7 +1,7 @@
-var util = require('../../../utils/util.js')
+var util = require('../../utils/util.js')
 Page({
   data: {
-    tabs: ['', '', '', '', '', '', ''],
+    tabs: ['','','','','','',''],
     stv: {
       windowWidth: 0,
       lineWidth: 0,
@@ -9,7 +9,7 @@ Page({
       tStart: false
     },
     activeTab: 6,
-    showText: '',
+    showText:'',
     currentDate: new Date(),
     startDate: new Date().setDate(new Date().getDate() - 6),
     endDate: new Date()
@@ -17,15 +17,15 @@ Page({
 
   onLoad: function (options) {
     try {
-      let { tabs, currentDate } = this.data;
-      tabs = [...util.getBeforDays(new Date(currentDate), 7)];
+      let { tabs, currentDate} = this.data;
+      tabs = [...util.getBeforDays(new Date(currentDate),7)];
       var res = wx.getSystemInfoSync()
       var _windowWidth = res.windowWidth;
       this.windowWidth = _windowWidth;
       this.data.stv.lineWidth = this.windowWidth / this.data.tabs.length;
       this.data.stv.windowWidth = _windowWidth;
       this.data.stv.offset = _windowWidth * this.data.activeTab;
-      this.setData({ tabs, stv: this.data.stv, showText: util.formatTime(currentDate, 'mm月dd日'), currentDate })
+      this.setData({ tabs, stv: this.data.stv, showText: util.formatTime(currentDate, 'mm月dd日'), currentDate})
       this.tabsCount = tabs.length;
     } catch (e) {
       console.log(e)
@@ -42,7 +42,7 @@ Page({
   },
   handlerMove(e) {
     let { clientX, clientY } = e.touches[0];
-    let { stv } = this.data;
+    let {  stv } = this.data;
     let offsetX = this.startX - clientX;
     this.startX = clientX;
     stv.offset += offsetX;
@@ -57,7 +57,7 @@ Page({
   handlerEnd(e) {
     let { clientX, clientY } = e.changedTouches[0];
     let endTime = e.timeStamp;
-    let { tabs, stv, activeTab, currentDate, startDate, endDate } = this.data;
+    let { tabs, stv, activeTab, currentDate ,startDate,endDate} = this.data;
     let { offset, windowWidth } = stv;
     let moveTime = endTime - this.tapStartTime;
     //快速滑动
@@ -91,23 +91,23 @@ Page({
     }
     currentDate = new Date(tabs[this.data.activeTab].date);
     stv.tStart = false;
-    if (this.data.activeTab == 6 && !util.equalsDate(currentDate, new Date())) {
-      tabs = [...util.getAfterDays(new Date(tabs[0].date), 7)];
+    if (this.data.activeTab == 6 && !util.equalsDate(currentDate,new Date())){
+      tabs = [...util.getAfterDays(new Date(tabs[0].date),7)];
       activeTab = 0;
       stv.offset = stv.windowWidth * activeTab;
       let _d = new Date(tabs[6].date);
       startDate = new Date(tabs[0].date);
-      endDate = _d.setDate(_d.getDate() + 6);
+      endDate = _d.setDate(_d.getDate() + 6);  
     }
-    if (this.data.activeTab == 0) {
-      tabs = [...util.getBeforDays(new Date(tabs[0].date), 7)];
+    if (this.data.activeTab == 0){
+      tabs = [...util.getBeforDays(new Date(tabs[0].date),7)];
       activeTab = 6;
       stv.offset = stv.windowWidth * activeTab;
       let _d = new Date(tabs[6].date);
       startDate = new Date(tabs[0].date);
-      endDate = _d.setDate(_d.getDate() + 6);
+      endDate = _d.setDate(_d.getDate() + 6);  
     }
-    this.setData({ tabs, activeTab, stv: this.data.stv, showText: util.formatTime(currentDate, 'mm月dd日'), currentDate, startDate, endDate })
+    this.setData({ tabs, activeTab, stv: this.data.stv, showText: util.formatTime(currentDate, 'mm月dd日'), currentDate, startDate, endDate})
   },
   _updateSelectedPage(page) {
     let { tabs, stv, activeTab } = this.data;
@@ -119,8 +119,8 @@ Page({
   handlerTabTap(e) {
     this._updateSelectedPage(e.currentTarget.dataset.index);
   },
-  handlerToday(e) {
-    let { tabs, currentDate, activeTab, startDate, endDate } = this.data;
+  handlerToday(e){
+    let { tabs, currentDate, activeTab,startDate,endDate } = this.data;
     tabs = [...util.getBeforDays(new Date(), 7)];
     activeTab = 6
     var res = wx.getSystemInfoSync()
@@ -130,13 +130,13 @@ Page({
     this.data.stv.windowWidth = _windowWidth;
     this.data.stv.offset = _windowWidth * activeTab;
     startDate = new Date().setDate(new Date().getDate() - 6);
-    endDate = currentDate = new Date()
-    this.setData({ tabs, activeTab, stv: this.data.stv, showText: util.formatTime(new Date(), 'mm月dd日'), currentDate, startDate, endDate })
+    endDate = currentDate= new Date()  
+    this.setData({ tabs, activeTab, stv: this.data.stv, showText: util.formatTime(new Date(), 'mm月dd日'), currentDate, startDate, endDate})
   },
   goTxDetail(e) {
     console.log('go som');
   },
-  goMonthReport(e) {
+  goMonthReport(e){
     console.log('go monthreport')
   }
 })

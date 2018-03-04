@@ -1,35 +1,75 @@
 <!--pages/warehouse/index/index.wxml-->
 <view class='container'>
+  <view class="stv-container color-bule-bg">
+    <view class="stv-opt pt20">
+      <view class='stv-opt-date'>
+        <text class="ft32 color-white">{{showText}}</text>
+        <view class='ml20'>
+          <button class="weui-btn btn-plain-small" style='color:#ffffff !important;border-color:#ffffff !important;' type="primary" plain="true" bindtap='handlerToday'>今天</button>
+        </view>
+      </view>
+      <view>
+        <button class="weui-btn btn-plain-small" style='color:#ffffff !important;border-color:#ffffff !important; ' type="primary" plain="true" bindtap='goMonthReport'>月报</button>
+      </view>
+    </view>
+
+    <view class="tab-bar">
+      <view wx:for="{{tabs}}" wx:key="unique" data-index="{{index}}" bindtap="handlerTabTap" class="tab {{activeTab==index?'tab-active':''}}" style="width: {{stv.windowWidth/tabs.length}}px">
+        <text>{{item.txt}}</text>
+      </view>
+      <view style="width: {{stv.lineWidth}}px; left: {{stv.offset/tabs.length}}px" class="under-line {{!stv.tStart? 'withAnimate': ''}}"></view>
+    </view>
+    <scroll-view class="scroll-view">
+      <view bindtouchstart="handlerStart" catchtouchmove="handlerMove" bindtouchend="handlerEnd" class="scroll-view-wrapper {{!stv.tStart? 'withAnimate': ''}}" style="left: -{{stv.offset}}px">
+        <view style="width: {{stv.windowWidth}}px;" wx:for="{{tabs}}" wx:key="unique" class="one-scene">
+          <navigator class="container" bindtap='goTxDetail'>
+            <view class='data-content'>
+              <text class='ft32 color-red fw'>{{index+12}}</text>
+              <text class='ft22 color-88'>进货量</text>
+            </view>
+            <view class='line-left'></view>
+            <view class='data-content'>
+              <text class='ft32 color-red fw'>{{index+31}}</text>
+              <text class='ft22 color-28'>出货量</text>
+            </view>
+          </navigator>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
   <view class='fun-view pt20 pb20'>
     <view>
       <text class='weui-grid__icon iconfont icon-shangpin ft56 color-red'></text>
-      <view class="weui-grid__label ft22 color-88">商品</view>
+      <view class="weui-grid__label ft28 color-88 pt10">商品</view>
     </view>
     <view>
       <text class='weui-grid__icon iconfont icon-jinhuodan ft56 color-red'></text>
-      <view class="weui-grid__label ft22 color-88 pt10">进货</view>
+      <view class="weui-grid__label ft24 color-88 pt10">进货</view>
     </view>
     <view>
       <text class='weui-grid__icon iconfont icon-fahuo ft56 color-red'></text>
-      <view class="weui-grid__label ft22 color-88 pt10">发货</view>
+      <view class="weui-grid__label ft24 color-88 pt10">发货</view>
     </view>
     <view>
       <text class='weui-grid__icon iconfont icon-pandian ft56 color-red'></text>
-      <view class="weui-grid__label ft22 color-88 pt10">盘点</view>
+      <view class="weui-grid__label ft24 color-88 pt10">盘点</view>
     </view>
   </view>
-  <view class='h30 color-bg line-top line-bottom'></view>
-  <view>
-    <swiper>
-      <swiper-item>
-        <view>11111111111111</view>
-      </swiper-item>
-      <swiper-item>
-        <view>2222222222222222222</view>
-      </swiper-item>
-      <swiper-item>
-        <view>333333333333333333</view>
-      </swiper-item>
-    </swiper>
+  <view class='line-bottom'></view>
+  <view class='mt20 alert-box'>
+    <text class='ft28 color-35 fw'>库存预警</text>
+    <view class='mt20' wx:for='[11231]' wx:key='unique' style='width:100%'>
+      <view class='ft24' style='display:flex;justify-content:space-around;line-height:2;'>
+        <text class='color-35' style='width:88%'>莫小在植物油莫小在植物油莫小</text>
+        <view>
+          <text class='color-88 ft28' >12</text>
+          <text class='iconfont icon-gengduo ml10 mr10 ft28 color-35'></text>
+        </view>
+      </view>
+      <view class='line-bottom'></view>
+    </view>
+    <view class='mt20'>
+      <button class="weui-btn btn-plain-small" type="primary" plain="true">一键生成进货单</button>
+    </view>
   </view>
 </view>

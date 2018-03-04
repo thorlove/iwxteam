@@ -65,7 +65,7 @@
         </view>
         <view class='line-left'></view>
         <view>
-          <button class="weui-btn" style='font-size: 28rpx;background-color: #554d94;' type="primary">给买家发送商品清单</button>
+          <button class="weui-btn btn-default" type="primary">给买家发送商品清单</button>
         </view>
       </view>
     </view>
@@ -108,7 +108,7 @@
         </view>
         <view class='line-left'></view>
         <view>
-          <button class="weui-btn" style='font-size: 28rpx;background-color: #554d94;' type="primary">给供货商发送进货单</button>
+          <button class="weui-btn btn-default"  type="primary">给供货商发送进货单</button>
         </view>
       </view>
     </view>

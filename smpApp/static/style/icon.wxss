@@ -1,0 +1,166 @@
+/** 引入字体 **/
+@import "/static/style/font.wxss";
+
+.icon-daoru:before {
+  content: "\e65d";
+}
+
+.icon-dizhi:before {
+  content: "\e619";
+}
+
+.icon-dianhua:before {
+  content: "\e6a9";
+}
+
+.icon-jiahao:before {
+  content: "\e61a";
+}
+
+.icon-wode:before {
+  content: "\e620";
+}
+
+.icon-pengyou:before {
+  content: "\e661";
+}
+
+.icon-kufang:before {
+  content: "\e69b";
+}
+
+.icon-saoyisao:before {
+  content: "\e64b";
+}
+
+.icon-sousu:before {
+  content: "\e648";
+}
+
+.icon-fenxiang:before {
+  content: "\e613";
+}
+
+.icon-bingtu:before {
+  content: "\e615";
+}
+
+.icon-dengdai:before {
+  content: "\e62c";
+}
+
+.icon-daishouhuo:before {
+  content: "\e690";
+}
+
+.icon-shanchu:before {
+  content: "\e61d";
+}
+
+.icon-pengyouquan:before {
+  content: "\e6a0";
+}
+
+.icon-beizhu:before {
+  content: "\e609";
+}
+
+.icon-gengduo:before {
+  content: "\e621";
+}
+
+.icon-shoukuan:before {
+  content: "\e611";
+}
+
+.icon-bianji:before {
+  content: "\e67f";
+}
+
+.icon-dingdan:before {
+  content: "\e897";
+}
+
+.icon-huiyuan:before {
+  content: "\e8a6";
+}
+
+.icon-jinhuodan:before {
+  content: "\e60d";
+}
+
+.icon-rili:before {
+  content: "\e614";
+}
+
+.icon-shangpin:before {
+  content: "\e633";
+}
+
+.icon-daifahuo:before {
+  content: "\e604";
+}
+
+.icon-zhangben:before {
+  content: "\e6ff";
+}
+
+.icon-shouye:before {
+  content: "\e699";
+}
+
+.icon-guolv:before {
+  content: "\e6e9";
+}
+
+.icon-fukuan:before {
+  content: "\e612";
+}
+
+.icon-shoukuanma:before {
+  content: "\e61f";
+}
+
+.icon-xiangshang:before {
+  content: "\e776";
+}
+
+.icon-xiangxia:before {
+  content: "\e779";
+}
+
+.icon-kehu:before {
+  content: "\e642";
+}
+
+.icon-fahuo:before {
+  content: "\e606";
+}
+
+.icon-chuku:before {
+  content: "\e602";
+}
+
+.icon-ruku:before {
+  content: "\e607";
+}
+
+.icon-zhexiantu:before {
+  content: "\e600";
+}
+
+.icon-tuandui:before {
+  content: "\e603";
+}
+
+.icon-xufei:before {
+  content: "\e6a8";
+}
+
+.icon-fahuozhong:before {
+  content: "\e692";
+}
+
+.icon-pandian:before {
+  content: "\e711";
+}

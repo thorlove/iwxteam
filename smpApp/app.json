@@ -1,5 +1,6 @@
 {
   "pages": [
+
     "pages/index/start/start",
     "pages/home/home",
     "pages/warehouse/index/index",
@@ -23,17 +24,20 @@
         "text": "首页",
         "iconPath": "static/images/nav/home-off.png",
         "selectedIconPath": "static/images/nav/home-on.png"
-      },{
+      },
+      {
         "pagePath": "pages/warehouse/index/index",
         "text": "库房",
         "iconPath": "static/images/nav/warehouse-off.png",
         "selectedIconPath": "static/images/nav/warehouse-on.png"
-      },{
+      },
+      {
         "pagePath": "pages/ledger/index/index",
         "text": "账本",
         "iconPath": "static/images/nav/ledger-off.png",
         "selectedIconPath": "static/images/nav/ledger-on.png"
-      },{
+      },
+      {
         "pagePath": "pages/me/index/index",
         "text": "我的",
         "iconPath": "static/images/nav/me-off.png",
